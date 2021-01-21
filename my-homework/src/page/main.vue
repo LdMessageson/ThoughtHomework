@@ -1,6 +1,5 @@
 <template>
   	<div>
-        <p>主页</p>
         <headTop></headTop>
         <!-- 顶部 -->
             
