@@ -1,6 +1,6 @@
 //components/Icon-svg
 <template>
-    <svg width="315px" height="106px" viewBox="0 0 315 106" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <svg width="315px" height="50px" viewBox="0 0 315 106" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <!-- Generator: Sketch 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
         <title>Untitled 2</title>
         <desc>Created with Sketch.</desc>

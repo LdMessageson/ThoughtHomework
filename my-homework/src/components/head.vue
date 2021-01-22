@@ -1,7 +1,7 @@
 <template>
   	<div>
         <div class="head_box">
-            <svg-icon></svg-icon>
+            <!-- <svg-icon></svg-icon> -->
         </div>
     </div>
     
@@ -35,11 +35,10 @@ export default {
 }
 
 </script>
- <!-- lang="scss" -->
 <style lang="scss" scoped>
     .head_box {
         width: 100%;
-        height: 40px;
+        height: 70px;
         text-align: center;
         box-shadow: 0px 5px 8px #888888;
         position: relative;

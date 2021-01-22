@@ -9,15 +9,20 @@
 let baseUrl = ''; 
 let routerMode = 'hash';
 let imgBaseUrl = '';
+let mock = false;
 if (process.env.NODE_ENV == 'development') {
     imgBaseUrl = '/img/';
+    mock = true;
+    baseUrl = '172.21.73.5'
 
 }else if(process.env.NODE_ENV == 'production'){
 	baseUrl = '//elm.cangdu.org';
     imgBaseUrl = '//elm.cangdu.org/img/';
+    mock = false;
 }
 export {
     baseUrl,
     routerMode,
-    imgBaseUrl
+    imgBaseUrl,
+    mock
 }
