@@ -42,11 +42,11 @@ export default {
         text-align: center;
         box-shadow: 0px 5px 8px #888888;
         position: relative;
-        .head_title {
-            // position: absolute;
-        }
-        .head_login {
-            // position: absolute;
-        }
+        // .head_title {
+        //     // position: absolute;
+        // }
+        // .head_login {
+        //     // position: absolute;
+        // }
     }
 </style>

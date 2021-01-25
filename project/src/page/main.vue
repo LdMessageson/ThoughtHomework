@@ -16,7 +16,7 @@
 import headTop from "../components/head";
 import sideBar from "../components/sideBar";
 import contentArea from "../components/content";
-import { hotcity1 } from '../service/getData'
+import { getService } from '../service/getData'
 export default {
     data(){
         return{
@@ -25,8 +25,7 @@ export default {
     },
 
 	mounted(){
-        hotcity1().then(res => {
-            
+        getService().then(res => {
             this.data = res;
             console.log(this.data)
         })
@@ -52,13 +51,13 @@ export default {
 <style lang="scss" scoped>
     .main_container {
         .main_content {
-            width: 80%;
-            margin: 0px auto;
-            display: -webkit-flex;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: nowrap;
-            justify-content: space-between;
+            // width: 80%;
+            // margin: 0px auto;
+            // display: -webkit-flex;
+            // display: flex;
+            // flex-direction: row;
+            // flex-wrap: nowrap;
+            // justify-content: space-between;
         }
     }
 </style>

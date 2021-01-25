@@ -31,10 +31,10 @@ export default {
 
 </script>
 <style lang="scss" scoped>
-  	.content_container {
-        width: 80px;
-        height: 100px;
-        background: #000;
-    }
+  	// .content_container {
+    //     width: 80px;
+    //     height: 100px;
+    //     background: #000;
+    // }
     
 </style>
