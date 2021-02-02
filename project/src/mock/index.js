@@ -1,6 +1,5 @@
 const MockData = require('mockjs');
 const sideData = [
-   
 
 ]
 const projectList = MockData.mock({
