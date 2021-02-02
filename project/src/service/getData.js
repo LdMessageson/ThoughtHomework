@@ -1,10 +1,7 @@
 import fetch from '../config/fetch'
+export const getService = () => fetch('/mock/artwork/chord1');
 
-
-
-
-
-export const getService = () => fetch('/v3/profile/explain');
+export const getService1 = () => fetch('/mock/artwork/chord2');
 
 
 

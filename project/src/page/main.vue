@@ -16,18 +16,21 @@
 import headTop from "../components/head";
 import sideBar from "../components/sideBar";
 import contentArea from "../components/content";
-import { getService } from '../service/getData'
+import { getService, getService1 } from '../service/getData'
 export default {
     data(){
         return{
             data: [],
+            data1: []
         }
     },
 
 	mounted(){
         getService().then(res => {
             this.data = res;
-            console.log(this.data)
+        })
+        getService1().then(res => {
+            this.data1 = res;
         })
 
     },
