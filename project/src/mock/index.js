@@ -1,4 +1,8 @@
 const MockData = require('mockjs');
+const sideData = [
+   
+
+]
 const projectList = MockData.mock({
     "list|20": [{
     'name': '@cname', // 中文名
@@ -7,7 +11,7 @@ const projectList = MockData.mock({
     'deptName': MockData.mock('@cword(2,4)'), // 随机2-4字中文单词
     'id': '@guid', // guid
    }]
- });
+});
  
 const data1 = [1,2,3,4,5];
 const artworkMock = function(app) {

@@ -1,12 +1,11 @@
 <template>
-    <div class="head">
-        <!-- <svg-icon></svg-icon> -->
-    </div>
+    <footer class="footer">
+        底部
+    </footer>
     
 </template>
 
 <script>
-import svgIcon from "./common/IconSvg"
 export default {
     data() {
         return{
@@ -20,7 +19,6 @@ export default {
     },
 
     components:{
-        svgIcon
     },
 
     computed:{
@@ -34,17 +32,17 @@ export default {
 
 </script>
 <style lang="scss" scoped>
-    .head {
+    .footer {
         width: 100%;
-        height: 70px;
+        height: 50px;
+        line-height: 50px;
+        color: #ffffff;
         text-align: center;
         box-shadow: 0px 5px 8px #888888;
-        position: relative;
-        .head_title {
-            position: absolute;
-        }
-        .head_login {
-            position: absolute;
-        }
+        background: #cccccc;
+        position: fixed;
+        left: 0px;
+        bottom: 0px;
+        z-index: 9;
     }
 </style>

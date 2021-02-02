@@ -1,5 +1,6 @@
 <template>
-  	<div class="content_container">
+    <div class="content">
+
     </div>
     
 </template>
@@ -11,15 +12,12 @@ export default {
     
         }
     },
-
 	mounted(){
 
-
     },
-
     components:{
+    
     },
-
     computed:{
 
     },
@@ -28,13 +26,12 @@ export default {
 
     },
 }
-
 </script>
 <style lang="scss" scoped>
-  	// .content_container {
-    //     width: 80px;
-    //     height: 100px;
-    //     background: #000;
-    // }
+  	.content {
+        width: calc(100% - 220px);
+        height: 100%;
+        overflow: auto;
+    }
     
 </style>

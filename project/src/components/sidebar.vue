@@ -1,5 +1,5 @@
 <template>
-  	<div class="side_container">
+  	<div class="side">
         <div class="side_box">
             
         
@@ -39,10 +39,11 @@ export default {
 
 </script>
 <style lang="scss" scoped>
-  	.side_container {
-          width: 180px;
-          height: 100px;
+  	.side {
+          width: 220px;
+          height: 100%;
           background: #ccc;
+          overflow: auto;
       }
     
 </style>
