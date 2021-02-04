@@ -1,0 +1,212 @@
+{
+  "sideDatas":[
+    {
+      "id": "1",
+      "iconClassName": "icon-dashboard",
+      "title": "DASHBOARD",
+      "authority": "administrator"
+    },
+    {
+      "id": "2",
+      "iconClassName": "icon-sitemap",
+      "title": "AGENT",
+      "authority": "administrator"
+    },
+    {
+      "id": "3",
+      "iconClassName": "icon-boat",
+      "title": "MY CRUISE",
+      "authority": "administrator"
+    },
+    {
+      "id": "4",
+      "iconClassName": "icon-life-bouy",
+      "title": "HELP",
+      "authority": "administrator"
+    }
+  ],
+  "historyDatas":[
+    {
+      "id": "1",
+      "name": "bjstdmngbr01/Acceptance_test"
+    },
+    {
+      "id": "2",
+      "name": "bjstdmngbr02/Acceptance_test"
+    },
+    {
+      "id": "3",
+      "name": "bjstdmngbr03/Acceptance_test"
+    },
+    {
+      "id": "4",
+      "name": "bjstdmngbr04/Acceptance_test_004"
+    },
+    {
+      "id": "5",
+      "name": "bjstdmngbr05/Acceptance_test"
+    },
+    {
+      "id": "6",
+      "name": "bjstdmngbr06/Acceptance_test"
+    },
+    {
+      "id": "7",
+      "name": "bjstdmngbr07/Acceptance_test_007"
+    },
+    {
+      "id": "8",
+      "name": "bjstdmngbr08/Acceptance_test"
+    },
+    {
+      "id": "9",
+      "name": "bjstdmngbr09/Acceptance_test"
+    },
+    {
+      "id": "10",
+      "name": "bjstdmngbr10/Acceptance_test"
+    },
+    {
+      "id": "11",
+      "name": "bjstdmngbr11/Acceptance_test"
+    },
+    {
+      "id": "12",
+      "name": "bjstdmngbr12/Acceptance_test"
+    },
+    {
+      "id": "13",
+      "name": "bjstdmngbr13/Acceptance_test"
+    }
+  ],
+  "companies": [
+    {
+      "id": 1,
+      "name": "Apple",
+      "description": "Apple lalala!"
+    },
+    {
+      "id": 2,
+      "name": "Microsoft",
+      "description": "Microsoft lalala!"
+    },
+    {
+      "id": 3,
+      "name": "Google",
+      "description": "Google lalala!"
+    }
+  ],
+  "agents": [
+    {
+      "name": "bjstdmngbdr01.thoughtworks.com",
+      "os": "windows",
+      "status": "idle",
+      "type": "physical",
+      "ip": "192.168.1.102",
+      "location": "/var/lib/cruise-agent",
+      "resources": [
+        "Firefox",
+        "Safari",
+        "Ubuntu",
+        "Chrome"
+      ],
+      "id": 1
+    },
+    {
+      "name": "bjstdmngbdr08.thoughtworks.com",
+      "os": "windows",
+      "status": "building",
+      "type": "virtual",
+      "ip": "192.168.1.80",
+      "location": "/var/lib/cruise-agent",
+      "resources": [
+        "Firefox",
+        "Safari",
+        "Ubuntu",
+        "Chrome"
+      ],
+      "id": 2
+    },
+    {
+      "name": "bjstdmngbdr10.thoughtworks.com",
+      "os": "ubuntu",
+      "status": "building",
+      "type": "physical",
+      "ip": "192.168.1.117",
+      "location": "/var/lib/cruise-agent",
+      "resources": [
+        "Firefox",
+        "Safari"
+      ],
+      "id": 3
+    },
+    {
+      "name": "bjstdmngbdr11.thoughtworks.com",
+      "os": "debian",
+      "status": "building",
+      "type": "virtual",
+      "ip": "192.168.1.102",
+      "location": "/var/lib/cruise-agent",
+      "resources": [
+        "Firefox",
+        "Safari",
+        "Ubuntu",
+        "Chrome"
+      ],
+      "id": 4
+    },
+    {
+      "name": "bjstdmngbdr15.thoughtworks.com",
+      "os": "suse",
+      "status": "idle",
+      "type": "physical",
+      "ip": "192.168.1.110",
+      "location": "/var/lib/cruise-agent",
+      "resources": [],
+      "id": 5
+    },
+    {
+      "name": "bjstdmngbdr02.thoughtworks.com",
+      "os": "centos",
+      "status": "idle",
+      "type": "virtual",
+      "ip": "192.168.1.103",
+      "location": "/var/lib/cruise-agent",
+      "resources": [
+        "Firefox",
+        "Safari",
+        "Ubuntu",
+        "Chrome"
+      ],
+      "id": 6
+    },
+    {
+      "name": "bjstdmngbdr04.thoughtworks.com",
+      "os": "suse",
+      "status": "idle",
+      "type": "physical",
+      "ip": "192.168.1.113",
+      "location": "/var/lib/cruise-agent",
+      "resources": [
+        "Firefox",
+        "Safari",
+        "Ubuntu",
+        "Chrome"
+      ],
+      "id": 7
+    },
+    {
+      "name": "bjstdmngbdr22.thoughtworks.com",
+      "os": "centos",
+      "status": "idle",
+      "type": "virtual",
+      "ip": "192.168.1.111",
+      "location": "/var/lib/cruise-agent",
+      "resources": [
+        "Ubuntu",
+        "Chrome"
+      ],
+      "id": 8
+    }
+  ]
+}

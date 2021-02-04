@@ -9,19 +9,15 @@
 let baseUrl = ''; 
 let routerMode = 'hash';
 let imgBaseUrl = '';
-let mock = false;
 if (process.env.NODE_ENV == 'development') {
     imgBaseUrl = '/img/';
-    mock = true;
 
 }else if(process.env.NODE_ENV == 'production'){
 	baseUrl = '';
     imgBaseUrl = '';
-    mock = false;
 }
 export {
     baseUrl,
     routerMode,
     imgBaseUrl,
-    mock
 }

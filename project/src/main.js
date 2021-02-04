@@ -4,7 +4,6 @@ import routes from './router/router'
 import { routerMode } from './config/env'
 import './style/fonts/fonts.css'
 import './style/common.scss'
-import "./mock"
 Vue.config.productionTip = false
 Vue.use(VueRouter);
 const router = new VueRouter({

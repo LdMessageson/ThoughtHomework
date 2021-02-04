@@ -17,7 +17,6 @@ import headTop from "../components/head";
 import footerAa from "../components/footer";
 import sideBar from "../components/sideBar";
 import contentArea from "../components/content";
-import { getService, getService1 } from '../service/getData'
 export default {
     data(){
         return{
@@ -27,12 +26,6 @@ export default {
     },
 
 	mounted(){
-        getService().then(res => {
-            this.data = res;
-        })
-        getService1().then(res => {
-            this.data1 = res;
-        })
 
     },
 

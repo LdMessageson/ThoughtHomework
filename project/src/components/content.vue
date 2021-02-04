@@ -29,8 +29,9 @@ export default {
 </script>
 <style lang="scss" scoped>
   	.content {
-        width: calc(100% - 220px);
+        width: calc(100% - 255px);
         height: 100%;
+        background: #6d6d6d;
         overflow: auto;
     }
     

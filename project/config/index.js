@@ -11,10 +11,11 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/api': {
-        target: 'http://172.21.67.83:6010',//需要代理的地址
+        target: 'http://localhost:3003/',//需要代理的地址
+        ws:true,
         changeOrigin: true,
         pathRewrite: {
-          '^/api': '/' //这里理解成用‘/api’代替target里面的地址，调取接口时直接用/api代替
+          '^/api': '' //这里理解成用‘/api’代替target里面的地址，调取接口时直接用/api代替
         }
       }
     },
