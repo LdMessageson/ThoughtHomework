@@ -54,12 +54,10 @@ export default {
 <style lang="scss" scoped>
   	.side {
         width: 255px;
-        height: 100%;
         background: #2D4054;
-        position: relative;
         .side_box {
-            position: absolute;
-            top: 0px;
+            height: 520px;
+            padding-top: 18px;
             p {
                 height: 45px;
                 line-height: 45px;
@@ -67,18 +65,19 @@ export default {
                 padding-left: 30px;
                 i {
                     font-size: 20px;
+                    vertical-align: middle;
                 }
                 span {
                     margin-left: 14px;
+                    vertical-align: middle;
                 }
             }
         }
         .history_box {
-            position: absolute;
             width: 100%;
-            bottom: 0px;
-
+            padding-bottom: 16px;
             .history_title {
+                margin: 0px 0px 15px 12px;
                 font-size: 24px;
                 color: #ccc;
             }

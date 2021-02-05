@@ -36,7 +36,7 @@ export default {
 <style lang="scss" scoped>
     .head {
         width: 100%;
-        height: 70px;
+        height: 50px;
         text-align: center;
         box-shadow: 0px 5px 8px #888888;
         position: relative;

@@ -8,7 +8,7 @@
             <!-- 内容部分 -->
             <contentArea></contentArea>
         </div>
-        <footerAa></footerAa>
+        <!-- <footerAa></footerAa> -->
     </div>
 </template>
 
@@ -51,8 +51,8 @@ export default {
         height: 100%;
         width: 100%;
         .main_content {
-            width: 80%;
-            height: calc(100% - 120px);
+            width: 70%;
+            // height: calc(100% - 120px);
             margin: 0px auto;
             display: -webkit-flex;
             display: flex;
