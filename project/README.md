@@ -43,3 +43,6 @@ npm insatll -g json-server
 json-server启动方式
 需要设置代理
 
+全局安装使用sass颜色变量需要安装
+npm install --s sass-resources-loader
+

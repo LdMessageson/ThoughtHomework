@@ -12,3 +12,6 @@
   	}
 
 </script>
+<style lang="scss">
+@import './style/common.scss';
+</style>
