@@ -6,7 +6,11 @@
                 <i class="cruise icon-cog"></i>
                 <p>3</p>
             </div>
-            <div></div>
+            <div>
+                <p>IDIE</p>
+                <i class="cruise icon-coffee"></i>
+                <p>5</p>
+            </div>
             <div></div>
         </div>
         <div class="content_tab_box">
@@ -98,7 +102,7 @@ export default {
                 height: 130px;
             }
             div:nth-child(1) {
-                // background: #FF9A2A;
+                background: #FF9A2A;
                 border-bottom: 1px solid #000000;
                 color: #ffffff;
                 position: relative;
@@ -116,8 +120,8 @@ export default {
                     left: 150px;
                     top: -7px;
                     margin-left: -40px;
-                    // animation: mtRoate 2s infinite;
-                    // -webkit-animation: mtRoate 2s linear infinite; /*Safari and Chrome*/
+                    animation: mtRoate 2s infinite;
+                    -webkit-animation: mtRoate 2s linear infinite; /*Safari and Chrome*/
                 }
                 p:last-of-type {
                     font-size: 48px;
@@ -146,9 +150,9 @@ export default {
             div:nth-child(2) {
                 background: $color5;
             }
-            // div:nth-child(3) {
-            //     background: #F3F3F3;
-            // }
+            div:nth-child(3) {
+                background: #F3F3F3;
+            }
         }
         .content_tab_box {
             display: flex;
@@ -166,14 +170,14 @@ export default {
         }
         .content_area  {
             width: 100%;
-            height: 140px;
+            height: 130px;
             background: #ffffff;
             margin: 14px 0px;
             display: flex;
             .content_area_img {
-                width: 140px;
-                height: 140px;
-                line-height: 140px;
+                width: 130px;
+                height: 130px;
+                line-height: 130px;
                 text-align: center;
                 img{
                     vertical-align: middle;
@@ -184,37 +188,62 @@ export default {
             }
             ul {
                li {
-                   
                    width: 100%;
-                   height: 70px;
-                   line-height: 70px;
+                   height: 65px;
+                
                    .content_status {
-                       padding: 1px 10px;
-                       background: #7FBC39;
-                       color: #FFFFFF;
+                        padding: 1px 10px;
+                        background: #7FBC39;
+                        color: #FFFFFF;
                    }
                    p {
-
+                   }
+                   i {
+                       font-size: 16px;
                    }
                    i, span {
                         vertical-align: middle;
                    }
                }
                li:first-child {
-                   span {
-                       font-size: 14px;
-                   }
-                   i {
-                       font-size: 16px;
-                   }
+                    line-height: 65px;
+                    p{
+                        
+                    }
+                    span {
+                        font-size: 14px;
+                    }
+                    i {
+                        font-size: 16px;
+                    }
                } 
                li:last-child {
                    display: flex;
                    align-items: center;
+                   p {
+                        height: 26px;
+                        line-height: 26px;
+                        margin: 0px 4px;
+                        padding: 0px 4px;
+                        background: #EFEFEF;
+                        color: #2D4054;
+                   }
                    .add_resource {
-                       width: 40px;
-                       height: 30px;
+                       width: 28px;
+                       height: 27px;
+                       padding: 0px;
+                       margin-left: 0px;
                        background: $color1;
+                       position: relative;
+                       i {
+                           position: absolute;
+                           font-size: 18px;
+                           color: #ffffff;
+                           left: 50%;
+                           top: 50%;
+                           margin-top: -9px;
+                           margin-left: -7px;
+                       }
                    }
                }
             }
