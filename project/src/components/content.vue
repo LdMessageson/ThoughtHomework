@@ -36,7 +36,7 @@
                     <span>/var/lib/cruise-agent</span>
                 </li>
                 <li>
-                    <p class="add_resource">
+                    <p class="add_resource" @click="addResource">
                         <i class="cruise icon-plus"></i>
                     </p>
                     <p>
@@ -61,6 +61,7 @@
                     </p>
                 </li>
             </ul>
+             <popUp :visible="visible"></popUp>
         </div>
        
     </div>
@@ -68,23 +69,27 @@
 </template>
 
 <script>
+import popUp from "./common/popUp";
 export default {
     data() {
         return{
-    
+            visible: false,
         }
     },
 	mounted(){
-// 00B4CF
+    
     },
     components:{
-    
+        popUp
     },
     computed:{
 
     },
     methods:{
-
+        addResource(event) {
+            this.visible = true;
+            console.log(event,"123");
+        }
     },
 }
 </script>
@@ -174,6 +179,7 @@ export default {
             background: #ffffff;
             margin: 14px 0px;
             display: flex;
+            position: relative;
             .content_area_img {
                 width: 130px;
                 height: 130px;
@@ -229,12 +235,14 @@ export default {
                         color: #2D4054;
                    }
                    .add_resource {
-                       width: 28px;
-                       height: 27px;
-                       padding: 0px;
-                       margin-left: 0px;
-                       background: $color1;
-                       position: relative;
+                        width: 28px;
+                        height: 27px;
+                        cursor: pointer;
+                        padding: 0px;
+                        margin-left: 0px;
+                        background: $color1;
+                        position: relative;
+                        
                        i {
                            position: absolute;
                            font-size: 18px;

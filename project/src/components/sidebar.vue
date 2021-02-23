@@ -29,12 +29,12 @@ export default {
     },
 
 	mounted(){
-        // getSideDatasService().then(res => {
-        //     this.sideData = res;
-        // });
-        // getHistoryDatasService().then(res => {
-        //     this.historyDatas = res;
-        // });
+        getSideDatasService().then(res => {
+            this.sideData = res;
+        });
+        getHistoryDatasService().then(res => {
+            this.historyDatas = res;
+        });
 
     },
 
