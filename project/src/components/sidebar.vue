@@ -54,6 +54,7 @@ export default {
 <style lang="scss" scoped>
   	.side {
         width: 255px;
+        // height: 100%;
         background: #2D4054;
         .side_box {
             height: 520px;

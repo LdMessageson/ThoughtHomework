@@ -21,47 +21,44 @@
             
             </div>
         </div>
-        <div class="content_area">
+        <div class="content_area" v-for="(item,i) in contentData" :key="item.i">
             <div class="content_area_img" >
-                <img src="../assets/windows.png" alt="" />
+               <img :src="require(`../assets/${item.os}.png`)" alt="" />
             </div>
             <ul>
                 <li>
                     <i class="cruise icon-desktop"></i>
-                    <span>bjstdmngbdr01.thoughtworks.com</span>
-                    <span class="content_status">Idie</span>
+                    <span class="way">{{item.name}}</span>
+                    <span class="content_status_box">
+                        <span 
+                        :style="item.status == 'idle' ? {background: '#7FBC39'} : {background:'#FF9A2A'}" 
+                        class="content_status">{{item.status}}</span>
+                    </span>
                     <i class="cruise icon-info"></i>
-                    <span>192.168.1.102</span>
+                    <span>{{item.ip}}</span>
                     <i class="icon-folder"></i>
-                    <span>/var/lib/cruise-agent</span>
-                </li>
+                    <span>{{item.location}}</span>
+                </li>   
                 <li>
-                    <p class="add_resource" @click="addResource">
+                    <p class="add_resource" @click="addResource(i,item)">
                         <i class="cruise icon-plus"></i>
                     </p>
-                    <p>
-                        <span>Firefox</span>
-                        <i class="icon-trash"></i>
-                    </p>
-                    <p>
-                        <span>Firefox</span>
-                        <i class="icon-trash"></i>
-                    </p>
-                     <p>
-                        <span>Firefox</span>
-                        <i class="icon-trash"></i>
-                    </p>
-                     <p>
-                        <span>Firefox</span>
-                        <i class="icon-trash"></i>
-                    </p>
-                    <p>
-                        <span>Firefox</span>
+                    <p v-for="(ele,j) in item.resources">
+                        <span>{{ele}}</span>
                         <i class="icon-trash"></i>
                     </p>
                 </li>
             </ul>
-             <popUp :visible="visible"></popUp>
+            <popUp
+                v-if="i === isShow"
+                title="父组件标题"
+                :hidden="ishidden"
+                @popup_sub="popup_submit"
+                @popup_clo="popup_close"
+                @clo_box="close_box"
+                @popup_des="popup_des"
+            >
+            </popUp>
         </div>
        
     </div>
@@ -70,14 +67,20 @@
 
 <script>
 import popUp from "./common/popUp";
+import { getContentDatasService } from '../service/getData'
 export default {
     data() {
         return{
-            visible: false,
+            // visible: false,
+            ishidden: false,
+            contentData: [],
+            isShow: 0
         }
     },
 	mounted(){
-    
+        getContentDatasService().then(res => {
+            this.contentData = res;
+        });
     },
     components:{
         popUp
@@ -86,10 +89,29 @@ export default {
 
     },
     methods:{
-        addResource(event) {
-            this.visible = true;
-            console.log(event,"123");
-        }
+        //点击弹出弹出层
+        addResource(index,item) {
+            this.isShow = index
+            this.ishidden = true;
+        },
+        //子组件的确定事件
+        popup_submit() {
+            this.ishidden = false;
+            console.log("点击了确定按钮");
+        },
+        //子组件的取消事件
+        popup_close() {
+            this.ishidden = false;
+            console.log("点击了取消事件");
+        },
+        popup_des() {
+            this.ishidden = false;
+        },
+        //点击弹出框以外触发
+        close_box() {
+            this.ishidden = false;
+            console.log("点击了弹出框外部");
+        },
     },
 }
 </script>
@@ -105,10 +127,9 @@ export default {
             div {
                 width: 300px;
                 height: 130px;
+                
             }
-            div:nth-child(1) {
-                background: #FF9A2A;
-                border-bottom: 1px solid #000000;
+            div:nth-child(1), div:nth-child(2) {
                 color: #ffffff;
                 position: relative;
                 p:first-of-type {
@@ -118,21 +139,26 @@ export default {
                     top: 14px;
                     left: 12px;
                 }
+                p:last-of-type {
+                    font-size: 48px;
+                    position: absolute;
+                    bottom: 10px;
+                    right: 18px;
+                }
                 i {
                     position: absolute;
                     font-size: 144px;
                     opacity: .2;
+                }
+            }
+            div:nth-child(1) {
+                background: #FF9A2A;
+                i {
                     left: 150px;
                     top: -7px;
                     margin-left: -40px;
                     animation: mtRoate 2s infinite;
                     -webkit-animation: mtRoate 2s linear infinite; /*Safari and Chrome*/
-                }
-                p:last-of-type {
-                    font-size: 48px;
-                    position: absolute;
-                    bottom: 10px;
-                    right: 14px;
                 }
                 @keyframes mtRoate {
                     from {
@@ -154,6 +180,11 @@ export default {
             }
             div:nth-child(2) {
                 background: $color5;
+                i {
+                    left: 50%;
+                    top: -7px;
+                    margin-left: -75px;
+                }
             }
             div:nth-child(3) {
                 background: #F3F3F3;
@@ -162,6 +193,7 @@ export default {
         .content_tab_box {
             display: flex;
             justify-content:space-between;
+            margin-top: 14px;
             .content_tab{
                 width: 300px;
                 height: 50px;
@@ -170,7 +202,7 @@ export default {
             .content_search {
                 width: calc(100% - 306px);
                 height: 50px;
-                background: red;
+                background: #FFFFFF;
             }
         }
         .content_area  {
@@ -196,12 +228,7 @@ export default {
                li {
                    width: 100%;
                    height: 65px;
-                
-                   .content_status {
-                        padding: 1px 10px;
-                        background: #7FBC39;
-                        color: #FFFFFF;
-                   }
+                  
                    p {
                    }
                    i {
@@ -219,8 +246,31 @@ export default {
                     span {
                         font-size: 14px;
                     }
-                    i {
+                    i{
                         font-size: 16px;
+                        color: #999999;
+                        margin: 0px 4px;
+                    }
+                    .way {
+                        font-weight:bold;
+                        color: $color1;
+                    }
+                    .content_status_box {
+                        display: inline-block;
+                        width: 144px;
+                        margin-left: 40px;
+                    }
+                    .content_status {
+                        padding: 1px 10px;
+                        background: #7FBC39;
+                        color: #FFFFFF;
+                        // margin: 0px 100px 0px 60px;
+                    }
+                    i:last-of-type {
+                        margin-left: 22px;
+                    }
+                    i:first-of-type {
+                        margin-left: 0px;
                     }
                } 
                li:last-child {
@@ -235,8 +285,8 @@ export default {
                         color: #2D4054;
                    }
                    .add_resource {
-                        width: 28px;
-                        height: 27px;
+                        width: 26px;
+                        height: 24px;
                         cursor: pointer;
                         padding: 0px;
                         margin-left: 0px;
@@ -256,6 +306,5 @@ export default {
                }
             }
         }
-        
     }
 </style>

@@ -52,7 +52,8 @@ export default {
         width: 100%;
         .main_content {
             width: 1350px;
-            // height: calc(100% - 120px);
+            // height: 100%;
+            height: calc(100% - 50px);
             margin: 0px auto;
             display: -webkit-flex;
             display: flex;
